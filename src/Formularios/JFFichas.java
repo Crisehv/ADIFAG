@@ -7,6 +7,7 @@ package Formularios;
 
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -17,8 +18,13 @@ public class JFFichas extends javax.swing.JFrame {
     /**
      * Creates new form JFFichas
      */
+    DefaultTableModel modeloTabla;
+    
     public JFFichas() {
         initComponents();
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        modeloTabla = (DefaultTableModel) tblSocioEconomicaEstructuraFamiliar.getModel();
+        modeloTabla.setNumRows(0);
     }
 
     /**
@@ -91,6 +97,23 @@ public class JFFichas extends javax.swing.JFrame {
         jTextField15 = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
         jTextField16 = new javax.swing.JTextField();
+        pnlEstructuraFamiliar = new javax.swing.JPanel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        txtSocioEconomicaEstructuraFamiliarNombre = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        txtSocioEconomicaEstructuraFamiliarApellidos = new javax.swing.JTextField();
+        jLabel28 = new javax.swing.JLabel();
+        txtSocioEconomicaEstructuraFamiliarParentesco = new javax.swing.JTextField();
+        jLabel29 = new javax.swing.JLabel();
+        txtSocioEconomicaEstructuraFamiliarEdad = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        txtSocioEconomicaEstructuraFamiliarEscolaridad = new javax.swing.JTextField();
+        jLabel31 = new javax.swing.JLabel();
+        txtSocioEconomicaEstructuraFamiliarOcupacion = new javax.swing.JTextField();
+        btnSocioEconomicaAgregarFamiliar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblSocioEconomicaEstructuraFamiliar = new javax.swing.JTable();
         pnlFichaDisciplina = new javax.swing.JScrollPane();
         pnlFichaAtencionSocial = new javax.swing.JScrollPane();
         pnlFichaAtencionMedica = new javax.swing.JScrollPane();
@@ -456,7 +479,135 @@ public class JFFichas extends javax.swing.JFrame {
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel24)
                     .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(274, 274, 274))
+                .addGap(44, 44, 44))
+        );
+
+        pnlEstructuraFamiliar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel25.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel25.setText("2. Estructura Familiar");
+
+        jLabel26.setText("Nombres");
+
+        jLabel27.setText("Apellidos");
+
+        jLabel28.setText("Parentesco");
+
+        jLabel29.setText("Edad");
+
+        jLabel30.setText("Escolaridad");
+
+        jLabel31.setText("Ocupación");
+
+        btnSocioEconomicaAgregarFamiliar.setText("Agregar Familiar");
+        btnSocioEconomicaAgregarFamiliar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSocioEconomicaAgregarFamiliarActionPerformed(evt);
+            }
+        });
+
+        tblSocioEconomicaEstructuraFamiliar.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "No.", "Nombres", "Apellidos", "Parentesco", "Edad", "Escolaridad", "Ocupación"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, true, true, true, true, true, true
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tblSocioEconomicaEstructuraFamiliar);
+
+        javax.swing.GroupLayout pnlEstructuraFamiliarLayout = new javax.swing.GroupLayout(pnlEstructuraFamiliar);
+        pnlEstructuraFamiliar.setLayout(pnlEstructuraFamiliarLayout);
+        pnlEstructuraFamiliarLayout.setHorizontalGroup(
+            pnlEstructuraFamiliarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlEstructuraFamiliarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlEstructuraFamiliarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlEstructuraFamiliarLayout.createSequentialGroup()
+                        .addGroup(pnlEstructuraFamiliarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1)
+                            .addGroup(pnlEstructuraFamiliarLayout.createSequentialGroup()
+                                .addGroup(pnlEstructuraFamiliarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnlEstructuraFamiliarLayout.createSequentialGroup()
+                                        .addComponent(jLabel26)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(txtSocioEconomicaEstructuraFamiliarNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(30, 30, 30)
+                                        .addGroup(pnlEstructuraFamiliarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel25)
+                                            .addComponent(btnSocioEconomicaAgregarFamiliar)))
+                                    .addGroup(pnlEstructuraFamiliarLayout.createSequentialGroup()
+                                        .addGap(287, 287, 287)
+                                        .addGroup(pnlEstructuraFamiliarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel27)
+                                            .addComponent(jLabel30))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(pnlEstructuraFamiliarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(txtSocioEconomicaEstructuraFamiliarEscolaridad, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE)
+                                            .addComponent(txtSocioEconomicaEstructuraFamiliarApellidos))
+                                        .addGroup(pnlEstructuraFamiliarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(pnlEstructuraFamiliarLayout.createSequentialGroup()
+                                                .addGap(91, 91, 91)
+                                                .addComponent(jLabel29)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(txtSocioEconomicaEstructuraFamiliarEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlEstructuraFamiliarLayout.createSequentialGroup()
+                                                .addGap(65, 65, 65)
+                                                .addComponent(jLabel31)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(txtSocioEconomicaEstructuraFamiliarOcupacion, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addGap(0, 47, Short.MAX_VALUE)))
+                        .addContainerGap())
+                    .addGroup(pnlEstructuraFamiliarLayout.createSequentialGroup()
+                        .addComponent(jLabel28)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtSocioEconomicaEstructuraFamiliarParentesco, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
+        );
+        pnlEstructuraFamiliarLayout.setVerticalGroup(
+            pnlEstructuraFamiliarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlEstructuraFamiliarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel25)
+                .addGap(18, 18, 18)
+                .addGroup(pnlEstructuraFamiliarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(txtSocioEconomicaEstructuraFamiliarNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel27)
+                    .addComponent(txtSocioEconomicaEstructuraFamiliarApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel29)
+                    .addComponent(txtSocioEconomicaEstructuraFamiliarEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23)
+                .addGroup(pnlEstructuraFamiliarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel28)
+                    .addComponent(txtSocioEconomicaEstructuraFamiliarParentesco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel30)
+                    .addComponent(txtSocioEconomicaEstructuraFamiliarEscolaridad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel31)
+                    .addComponent(txtSocioEconomicaEstructuraFamiliarOcupacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnSocioEconomicaAgregarFamiliar)
+                .addGap(50, 50, 50)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pnlFichaEstudioSocioeconomicoContenedorLayout = new javax.swing.GroupLayout(pnlFichaEstudioSocioeconomicoContenedor);
@@ -464,18 +615,27 @@ public class JFFichas extends javax.swing.JFrame {
         pnlFichaEstudioSocioeconomicoContenedorLayout.setHorizontalGroup(
             pnlFichaEstudioSocioeconomicoContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlFichaEstudioSocioeconomicoContenedorLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
                 .addComponent(pnlDatosGenerales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(pnlDatosVictima, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 379, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(pnlEstructuraFamiliar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(54, Short.MAX_VALUE))
         );
         pnlFichaEstudioSocioeconomicoContenedorLayout.setVerticalGroup(
             pnlFichaEstudioSocioeconomicoContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlFichaEstudioSocioeconomicoContenedorLayout.createSequentialGroup()
                 .addGroup(pnlFichaEstudioSocioeconomicoContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnlDatosGenerales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pnlDatosVictima, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 262, Short.MAX_VALUE))
+                    .addGroup(pnlFichaEstudioSocioeconomicoContenedorLayout.createSequentialGroup()
+                        .addGap(121, 121, 121)
+                        .addComponent(pnlDatosGenerales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlFichaEstudioSocioeconomicoContenedorLayout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addGroup(pnlFichaEstudioSocioeconomicoContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pnlEstructuraFamiliar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pnlDatosVictima, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(759, Short.MAX_VALUE))
         );
 
         pnlFichaEstudioSocioeconomico.setViewportView(pnlFichaEstudioSocioeconomicoContenedor);
@@ -507,19 +667,29 @@ public class JFFichas extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(pnlContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 1368, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(pnlContenedor, javax.swing.GroupLayout.DEFAULT_SIZE, 2114, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(pnlContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 785, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(pnlContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSocioEconomicaAgregarFamiliarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSocioEconomicaAgregarFamiliarActionPerformed
+
+        
+        Object[] fila = new Object[modeloTabla.getColumnCount()];
+        fila[0] = modeloTabla.getRowCount() + 1;
+        fila[1] = txtSocioEconomicaEstructuraFamiliarNombre.getText();
+        fila[2] = txtSocioEconomicaEstructuraFamiliarApellidos.getText();
+        fila[3] = txtSocioEconomicaEstructuraFamiliarParentesco.getText();
+        fila[4] = txtSocioEconomicaEstructuraFamiliarEdad.getText();
+        fila[5] = txtSocioEconomicaEstructuraFamiliarEscolaridad.getText();
+        fila[6] = txtSocioEconomicaEstructuraFamiliarOcupacion.getText();
+        modeloTabla.addRow(fila);
+    }//GEN-LAST:event_btnSocioEconomicaAgregarFamiliarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -557,6 +727,7 @@ public class JFFichas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnSocioEconomicaAgregarFamiliar;
     private javax.swing.ButtonGroup grupoSocioEconomicoEscolaridad;
     private javax.swing.ButtonGroup grupoSocioEconomicoLeerEscribir;
     private javax.swing.ButtonGroup grupoSocioEconomicoSexo;
@@ -577,7 +748,14 @@ public class JFFichas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -593,6 +771,7 @@ public class JFFichas extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JRadioButton jRadioButton6;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
@@ -613,6 +792,7 @@ public class JFFichas extends javax.swing.JFrame {
     private javax.swing.JTabbedPane pnlContenedor;
     private javax.swing.JPanel pnlDatosGenerales;
     private javax.swing.JPanel pnlDatosVictima;
+    private javax.swing.JPanel pnlEstructuraFamiliar;
     private javax.swing.JScrollPane pnlFichaAtencionLegal;
     private javax.swing.JScrollPane pnlFichaAtencionMedica;
     private javax.swing.JScrollPane pnlFichaAtencionPsicologica;
@@ -624,6 +804,13 @@ public class JFFichas extends javax.swing.JFrame {
     private javax.swing.JPanel pnlFichaEstudioSocioeconomicoContenedor;
     private javax.swing.JRadioButton rdbtnSexoFemenino;
     private javax.swing.JRadioButton rdbtnSexoMasculino;
+    private javax.swing.JTable tblSocioEconomicaEstructuraFamiliar;
     private javax.swing.JTextField txtRegistroSocial;
+    private javax.swing.JTextField txtSocioEconomicaEstructuraFamiliarApellidos;
+    private javax.swing.JTextField txtSocioEconomicaEstructuraFamiliarEdad;
+    private javax.swing.JTextField txtSocioEconomicaEstructuraFamiliarEscolaridad;
+    private javax.swing.JTextField txtSocioEconomicaEstructuraFamiliarNombre;
+    private javax.swing.JTextField txtSocioEconomicaEstructuraFamiliarOcupacion;
+    private javax.swing.JTextField txtSocioEconomicaEstructuraFamiliarParentesco;
     // End of variables declaration//GEN-END:variables
 }
