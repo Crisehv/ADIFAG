@@ -1402,6 +1402,7 @@ public class JFFichas extends javax.swing.JFrame {
         jTextArea10.setRows(5);
         jScrollPane12.setViewportView(jTextArea10);
 
+        jLabel80.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel80.setText("Informe:");
 
         jTextArea11.setColumns(20);
@@ -1845,6 +1846,7 @@ public class JFFichas extends javax.swing.JFrame {
         jLabel71.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel71.setText("Vo. Bo. Coordinación");
 
+        jLabel72.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel72.setText("Firma del Residente/ Impresión Digital");
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
