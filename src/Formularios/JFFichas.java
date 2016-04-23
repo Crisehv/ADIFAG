@@ -194,16 +194,16 @@ public class JFFichas extends javax.swing.JFrame {
         jLabel100 = new javax.swing.JLabel();
         txtFichaDisciplinaNoConocimiento = new javax.swing.JTextField();
         txtFichaDisciplinaNombre = new javax.swing.JTextField();
-        jTextField37 = new javax.swing.JTextField();
-        jTextField38 = new javax.swing.JTextField();
+        txtFichaDisciplinaEdad = new javax.swing.JTextField();
+        txtFichaDisciplinaFechaHora = new javax.swing.JTextField();
         jScrollPane18 = new javax.swing.JScrollPane();
-        jTextArea16 = new javax.swing.JTextArea();
+        areaFichaDisciplinaNormasInfringio = new javax.swing.JTextArea();
         jLabel101 = new javax.swing.JLabel();
         jLabel102 = new javax.swing.JLabel();
         jScrollPane19 = new javax.swing.JScrollPane();
-        jTextArea17 = new javax.swing.JTextArea();
+        areaFichaDisciplinaRazon = new javax.swing.JTextArea();
         jScrollPane20 = new javax.swing.JScrollPane();
-        jTextArea18 = new javax.swing.JTextArea();
+        areaFichaDisciplinaMedidasSanciones = new javax.swing.JTextArea();
         jLabel103 = new javax.swing.JLabel();
         jLabel104 = new javax.swing.JLabel();
         pnlFichaAtencionMedica = new javax.swing.JScrollPane();
@@ -267,28 +267,28 @@ public class JFFichas extends javax.swing.JFrame {
         jLabel114 = new javax.swing.JLabel();
         jLabel115 = new javax.swing.JLabel();
         jLabel116 = new javax.swing.JLabel();
-        jTextField39 = new javax.swing.JTextField();
-        jTextField40 = new javax.swing.JTextField();
-        jTextField41 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox();
-        jTextField42 = new javax.swing.JTextField();
-        jTextField43 = new javax.swing.JTextField();
-        jTextField44 = new javax.swing.JTextField();
-        jTextField45 = new javax.swing.JTextField();
-        jTextField46 = new javax.swing.JTextField();
-        jTextField47 = new javax.swing.JTextField();
+        txtControlInternoNumero = new javax.swing.JTextField();
+        txtControlInternoPersonaqueVisita = new javax.swing.JTextField();
+        txtControlInternoEdad = new javax.swing.JTextField();
+        comboControlInternoSexo = new javax.swing.JComboBox();
+        txtControlInternoParentesco = new javax.swing.JTextField();
+        txtControlInternoOtros = new javax.swing.JTextField();
+        txtControlInternoDireccion = new javax.swing.JTextField();
+        txtControlInternoLugaryFecha = new javax.swing.JTextField();
+        txtControlInternoTelefono = new javax.swing.JTextField();
+        txtControlInternoPersonaQatiendelaVisita = new javax.swing.JTextField();
         jLabel117 = new javax.swing.JLabel();
-        jTextField48 = new javax.swing.JTextField();
+        txtControlInternoFichaAtencionNumero = new javax.swing.JTextField();
         jLabel118 = new javax.swing.JLabel();
         jLabel119 = new javax.swing.JLabel();
-        jTextField49 = new javax.swing.JTextField();
-        jTextField50 = new javax.swing.JTextField();
+        txtControlInternoNombre = new javax.swing.JTextField();
+        txtControlInternoFechadeNacimiento = new javax.swing.JTextField();
         jLabel120 = new javax.swing.JLabel();
-        jTextField52 = new javax.swing.JTextField();
+        txtControlInternoNumeroProceso = new javax.swing.JTextField();
         jLabel121 = new javax.swing.JLabel();
         jLabel122 = new javax.swing.JLabel();
-        jTextField53 = new javax.swing.JTextField();
-        jTextField54 = new javax.swing.JTextField();
+        txtControlInternoNombrePadreMadre = new javax.swing.JTextField();
+        txtControlInternoReligion = new javax.swing.JTextField();
         jLabel123 = new javax.swing.JLabel();
         jLabel124 = new javax.swing.JLabel();
         jLabel125 = new javax.swing.JLabel();
@@ -1453,9 +1453,15 @@ public class JFFichas extends javax.swing.JFrame {
         jLabel100.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel100.setText("Razón:");
 
-        jTextArea16.setColumns(20);
-        jTextArea16.setRows(5);
-        jScrollPane18.setViewportView(jTextArea16);
+        txtFichaDisciplinaNoConocimiento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFichaDisciplinaNoConocimientoActionPerformed(evt);
+            }
+        });
+
+        areaFichaDisciplinaNormasInfringio.setColumns(20);
+        areaFichaDisciplinaNormasInfringio.setRows(5);
+        jScrollPane18.setViewportView(areaFichaDisciplinaNormasInfringio);
 
         jLabel101.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel101.setText("Que normas infringió:");
@@ -1463,13 +1469,13 @@ public class JFFichas extends javax.swing.JFrame {
         jLabel102.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel102.setText("Medidas o sanciones que se tomarán al respecto: ");
 
-        jTextArea17.setColumns(20);
-        jTextArea17.setRows(5);
-        jScrollPane19.setViewportView(jTextArea17);
+        areaFichaDisciplinaRazon.setColumns(20);
+        areaFichaDisciplinaRazon.setRows(5);
+        jScrollPane19.setViewportView(areaFichaDisciplinaRazon);
 
-        jTextArea18.setColumns(20);
-        jTextArea18.setRows(5);
-        jScrollPane20.setViewportView(jTextArea18);
+        areaFichaDisciplinaMedidasSanciones.setColumns(20);
+        areaFichaDisciplinaMedidasSanciones.setRows(5);
+        jScrollPane20.setViewportView(areaFichaDisciplinaMedidasSanciones);
 
         jLabel103.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel103.setText("Vo. Bo. Coordinación");
@@ -1501,9 +1507,9 @@ public class JFFichas extends javax.swing.JFrame {
                                     .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jScrollPane18, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTextField37, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+                                            .addComponent(txtFichaDisciplinaEdad, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
                                             .addComponent(txtFichaDisciplinaNombre)
-                                            .addComponent(jTextField38, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+                                            .addComponent(txtFichaDisciplinaFechaHora, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
                                             .addComponent(jScrollPane19)
                                             .addComponent(txtFichaDisciplinaNoConocimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addGroup(jPanel14Layout.createSequentialGroup()
@@ -1539,11 +1545,11 @@ public class JFFichas extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel98)
-                            .addComponent(jTextField37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtFichaDisciplinaEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(27, 27, 27)
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel99)
-                            .addComponent(jTextField38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtFichaDisciplinaFechaHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(13, 13, 13)
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel100)
@@ -1886,63 +1892,63 @@ public class JFFichas extends javax.swing.JFrame {
         jLabel116.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel116.setText("Nombre de la persona que atiende la visita:");
 
-        jTextField39.addActionListener(new java.awt.event.ActionListener() {
+        txtControlInternoNumero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField39ActionPerformed(evt);
+                txtControlInternoNumeroActionPerformed(evt);
             }
         });
 
-        jTextField41.addActionListener(new java.awt.event.ActionListener() {
+        txtControlInternoEdad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField41ActionPerformed(evt);
+                txtControlInternoEdadActionPerformed(evt);
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Masculino", "Femenino" }));
-        jComboBox1.setSelectedIndex(-1);
+        comboControlInternoSexo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Masculino", "Femenino" }));
+        comboControlInternoSexo.setSelectedIndex(-1);
 
-        jTextField42.addActionListener(new java.awt.event.ActionListener() {
+        txtControlInternoParentesco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField42ActionPerformed(evt);
+                txtControlInternoParentescoActionPerformed(evt);
             }
         });
 
-        jTextField43.addActionListener(new java.awt.event.ActionListener() {
+        txtControlInternoOtros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField43ActionPerformed(evt);
+                txtControlInternoOtrosActionPerformed(evt);
             }
         });
 
-        jTextField44.addActionListener(new java.awt.event.ActionListener() {
+        txtControlInternoDireccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField44ActionPerformed(evt);
+                txtControlInternoDireccionActionPerformed(evt);
             }
         });
 
-        jTextField45.addActionListener(new java.awt.event.ActionListener() {
+        txtControlInternoLugaryFecha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField45ActionPerformed(evt);
+                txtControlInternoLugaryFechaActionPerformed(evt);
             }
         });
 
-        jTextField46.addActionListener(new java.awt.event.ActionListener() {
+        txtControlInternoTelefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField46ActionPerformed(evt);
+                txtControlInternoTelefonoActionPerformed(evt);
             }
         });
 
-        jTextField47.addActionListener(new java.awt.event.ActionListener() {
+        txtControlInternoPersonaQatiendelaVisita.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField47ActionPerformed(evt);
+                txtControlInternoPersonaQatiendelaVisitaActionPerformed(evt);
             }
         });
 
         jLabel117.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel117.setText("FICHA DE ATENCIÓN PERSONAL/ESPIRITUAL");
 
-        jTextField48.addActionListener(new java.awt.event.ActionListener() {
+        txtControlInternoFichaAtencionNumero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField48ActionPerformed(evt);
+                txtControlInternoFichaAtencionNumeroActionPerformed(evt);
             }
         });
 
@@ -1952,18 +1958,18 @@ public class JFFichas extends javax.swing.JFrame {
         jLabel119.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel119.setText("Nombre:");
 
-        jTextField50.addActionListener(new java.awt.event.ActionListener() {
+        txtControlInternoFechadeNacimiento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField50ActionPerformed(evt);
+                txtControlInternoFechadeNacimientoActionPerformed(evt);
             }
         });
 
         jLabel120.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel120.setText("Fecha de nacimiento: ");
 
-        jTextField52.addActionListener(new java.awt.event.ActionListener() {
+        txtControlInternoNumeroProceso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField52ActionPerformed(evt);
+                txtControlInternoNumeroProcesoActionPerformed(evt);
             }
         });
 
@@ -1973,15 +1979,15 @@ public class JFFichas extends javax.swing.JFrame {
         jLabel122.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel122.setText("Nombre del padre/madre: ");
 
-        jTextField53.addActionListener(new java.awt.event.ActionListener() {
+        txtControlInternoNombrePadreMadre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField53ActionPerformed(evt);
+                txtControlInternoNombrePadreMadreActionPerformed(evt);
             }
         });
 
-        jTextField54.addActionListener(new java.awt.event.ActionListener() {
+        txtControlInternoReligion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField54ActionPerformed(evt);
+                txtControlInternoReligionActionPerformed(evt);
             }
         });
 
@@ -2014,45 +2020,45 @@ public class JFFichas extends javax.swing.JFrame {
                                     .addGroup(jPanel16Layout.createSequentialGroup()
                                         .addComponent(jLabel115)
                                         .addGap(53, 53, 53)
-                                        .addComponent(jTextField46, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtControlInternoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel16Layout.createSequentialGroup()
                                         .addComponent(jLabel114)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField45))
+                                        .addComponent(txtControlInternoLugaryFecha))
                                     .addGroup(jPanel16Layout.createSequentialGroup()
                                         .addComponent(jLabel113)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jTextField44, javax.swing.GroupLayout.PREFERRED_SIZE, 516, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtControlInternoDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 516, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel16Layout.createSequentialGroup()
                                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel108)
                                             .addGroup(jPanel16Layout.createSequentialGroup()
                                                 .addComponent(jLabel109)
                                                 .addGap(18, 18, 18)
-                                                .addComponent(jTextField41, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(txtControlInternoEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(jPanel16Layout.createSequentialGroup()
                                                 .addComponent(jLabel107)
                                                 .addGap(34, 34, 34)
-                                                .addComponent(jTextField39, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(txtControlInternoNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGap(9, 9, 9)
                                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtControlInternoPersonaqueVisita, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(jPanel16Layout.createSequentialGroup()
                                                 .addComponent(jLabel110)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(comboControlInternoSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(32, 32, 32)
                                                 .addComponent(jLabel111)
                                                 .addGap(18, 18, 18)
-                                                .addComponent(jTextField42, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                .addComponent(txtControlInternoParentesco, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                     .addGroup(jPanel16Layout.createSequentialGroup()
                                         .addComponent(jLabel112)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, 516, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtControlInternoOtros, javax.swing.GroupLayout.PREFERRED_SIZE, 516, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel16Layout.createSequentialGroup()
                                         .addComponent(jLabel116)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jTextField47)))))
+                                        .addComponent(txtControlInternoPersonaQatiendelaVisita)))))
                         .addGap(63, 63, 63)
                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel16Layout.createSequentialGroup()
@@ -2066,18 +2072,18 @@ public class JFFichas extends javax.swing.JFrame {
                                     .addComponent(jLabel122))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField50)
-                                    .addComponent(jTextField52, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField53)
-                                    .addComponent(jTextField54, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(txtControlInternoFechadeNacimiento)
+                                    .addComponent(txtControlInternoNumeroProceso, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtControlInternoNombrePadreMadre)
+                                    .addComponent(txtControlInternoReligion, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel16Layout.createSequentialGroup()
                                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel118)
                                     .addComponent(jLabel119))
                                 .addGap(89, 89, 89)
                                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField48, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField49, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(txtControlInternoFichaAtencionNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtControlInternoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel16Layout.createSequentialGroup()
                                 .addComponent(jLabel124)
                                 .addGap(167, 167, 167)
@@ -2096,65 +2102,65 @@ public class JFFichas extends javax.swing.JFrame {
                         .addGap(23, 23, 23)
                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel107)
-                            .addComponent(jTextField39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtControlInternoNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel108)
-                            .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtControlInternoPersonaqueVisita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel109)
-                            .addComponent(jTextField41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtControlInternoEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel110)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(comboControlInternoSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel111)
-                            .addComponent(jTextField42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtControlInternoParentesco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel112)
-                            .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtControlInternoOtros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel113)
-                            .addComponent(jTextField44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtControlInternoDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(27, 27, 27)
                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel114)
-                            .addComponent(jTextField45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtControlInternoLugaryFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel16Layout.createSequentialGroup()
                         .addComponent(jLabel117)
                         .addGap(20, 20, 20)
                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel118)
-                            .addComponent(jTextField48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtControlInternoFichaAtencionNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel119)
-                            .addComponent(jTextField49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtControlInternoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel120)
-                            .addComponent(jTextField50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtControlInternoFechadeNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel121)
-                            .addComponent(jTextField52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtControlInternoNumeroProceso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel122)
-                            .addComponent(jTextField53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtControlInternoNombrePadreMadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(27, 27, 27)
                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel123)
-                            .addComponent(jTextField54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(txtControlInternoReligion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(13, 13, 13)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel115)
-                    .addComponent(jTextField46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtControlInternoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel116)
-                    .addComponent(jTextField47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtControlInternoPersonaQatiendelaVisita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(87, 87, 87)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel124)
@@ -2501,57 +2507,61 @@ public class JFFichas extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField22ActionPerformed
 
-    private void jTextField39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField39ActionPerformed
+    private void txtControlInternoNumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtControlInternoNumeroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField39ActionPerformed
+    }//GEN-LAST:event_txtControlInternoNumeroActionPerformed
 
-    private void jTextField41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField41ActionPerformed
+    private void txtControlInternoEdadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtControlInternoEdadActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField41ActionPerformed
+    }//GEN-LAST:event_txtControlInternoEdadActionPerformed
 
-    private void jTextField42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField42ActionPerformed
+    private void txtControlInternoParentescoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtControlInternoParentescoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField42ActionPerformed
+    }//GEN-LAST:event_txtControlInternoParentescoActionPerformed
 
-    private void jTextField43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField43ActionPerformed
+    private void txtControlInternoOtrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtControlInternoOtrosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField43ActionPerformed
+    }//GEN-LAST:event_txtControlInternoOtrosActionPerformed
 
-    private void jTextField44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField44ActionPerformed
+    private void txtControlInternoDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtControlInternoDireccionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField44ActionPerformed
+    }//GEN-LAST:event_txtControlInternoDireccionActionPerformed
 
-    private void jTextField45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField45ActionPerformed
+    private void txtControlInternoLugaryFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtControlInternoLugaryFechaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField45ActionPerformed
+    }//GEN-LAST:event_txtControlInternoLugaryFechaActionPerformed
 
-    private void jTextField46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField46ActionPerformed
+    private void txtControlInternoTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtControlInternoTelefonoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField46ActionPerformed
+    }//GEN-LAST:event_txtControlInternoTelefonoActionPerformed
 
-    private void jTextField47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField47ActionPerformed
+    private void txtControlInternoPersonaQatiendelaVisitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtControlInternoPersonaQatiendelaVisitaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField47ActionPerformed
+    }//GEN-LAST:event_txtControlInternoPersonaQatiendelaVisitaActionPerformed
 
-    private void jTextField48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField48ActionPerformed
+    private void txtControlInternoFichaAtencionNumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtControlInternoFichaAtencionNumeroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField48ActionPerformed
+    }//GEN-LAST:event_txtControlInternoFichaAtencionNumeroActionPerformed
 
-    private void jTextField50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField50ActionPerformed
+    private void txtControlInternoFechadeNacimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtControlInternoFechadeNacimientoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField50ActionPerformed
+    }//GEN-LAST:event_txtControlInternoFechadeNacimientoActionPerformed
 
-    private void jTextField52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField52ActionPerformed
+    private void txtControlInternoNumeroProcesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtControlInternoNumeroProcesoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField52ActionPerformed
+    }//GEN-LAST:event_txtControlInternoNumeroProcesoActionPerformed
 
-    private void jTextField53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField53ActionPerformed
+    private void txtControlInternoNombrePadreMadreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtControlInternoNombrePadreMadreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField53ActionPerformed
+    }//GEN-LAST:event_txtControlInternoNombrePadreMadreActionPerformed
 
-    private void jTextField54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField54ActionPerformed
+    private void txtControlInternoReligionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtControlInternoReligionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField54ActionPerformed
+    }//GEN-LAST:event_txtControlInternoReligionActionPerformed
+
+    private void txtFichaDisciplinaNoConocimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFichaDisciplinaNoConocimientoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFichaDisciplinaNoConocimientoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2589,7 +2599,11 @@ public class JFFichas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea areaFichaDisciplinaMedidasSanciones;
+    private javax.swing.JTextArea areaFichaDisciplinaNormasInfringio;
+    private javax.swing.JTextArea areaFichaDisciplinaRazon;
     private javax.swing.JButton btnSocioEconomicaAgregarFamiliar;
+    private javax.swing.JComboBox comboControlInternoSexo;
     private javax.swing.ButtonGroup grupoSocioEconomcoViviendaTipoVivienda;
     private javax.swing.ButtonGroup grupoSocioEconomicoEscolaridad;
     private javax.swing.ButtonGroup grupoSocioEconomicoLeerEscribir;
@@ -2620,7 +2634,6 @@ public class JFFichas extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox7;
     private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JCheckBox jCheckBox9;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -2800,9 +2813,6 @@ public class JFFichas extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea13;
     private javax.swing.JTextArea jTextArea14;
     private javax.swing.JTextArea jTextArea15;
-    private javax.swing.JTextArea jTextArea16;
-    private javax.swing.JTextArea jTextArea17;
-    private javax.swing.JTextArea jTextArea18;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
@@ -2839,25 +2849,8 @@ public class JFFichas extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField32;
     private javax.swing.JTextField jTextField33;
     private javax.swing.JTextField jTextField34;
-    private javax.swing.JTextField jTextField37;
-    private javax.swing.JTextField jTextField38;
-    private javax.swing.JTextField jTextField39;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField40;
-    private javax.swing.JTextField jTextField41;
-    private javax.swing.JTextField jTextField42;
-    private javax.swing.JTextField jTextField43;
-    private javax.swing.JTextField jTextField44;
-    private javax.swing.JTextField jTextField45;
-    private javax.swing.JTextField jTextField46;
-    private javax.swing.JTextField jTextField47;
-    private javax.swing.JTextField jTextField48;
-    private javax.swing.JTextField jTextField49;
     private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField50;
-    private javax.swing.JTextField jTextField52;
-    private javax.swing.JTextField jTextField53;
-    private javax.swing.JTextField jTextField54;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
@@ -2883,6 +2876,23 @@ public class JFFichas extends javax.swing.JFrame {
     private javax.swing.JRadioButton rdbtnSexoFemenino;
     private javax.swing.JRadioButton rdbtnSexoMasculino;
     private javax.swing.JTable tblSocioEconomicaEstructuraFamiliar;
+    private javax.swing.JTextField txtControlInternoDireccion;
+    private javax.swing.JTextField txtControlInternoEdad;
+    private javax.swing.JTextField txtControlInternoFechadeNacimiento;
+    private javax.swing.JTextField txtControlInternoFichaAtencionNumero;
+    private javax.swing.JTextField txtControlInternoLugaryFecha;
+    private javax.swing.JTextField txtControlInternoNombre;
+    private javax.swing.JTextField txtControlInternoNombrePadreMadre;
+    private javax.swing.JTextField txtControlInternoNumero;
+    private javax.swing.JTextField txtControlInternoNumeroProceso;
+    private javax.swing.JTextField txtControlInternoOtros;
+    private javax.swing.JTextField txtControlInternoParentesco;
+    private javax.swing.JTextField txtControlInternoPersonaQatiendelaVisita;
+    private javax.swing.JTextField txtControlInternoPersonaqueVisita;
+    private javax.swing.JTextField txtControlInternoReligion;
+    private javax.swing.JTextField txtControlInternoTelefono;
+    private javax.swing.JTextField txtFichaDisciplinaEdad;
+    private javax.swing.JTextField txtFichaDisciplinaFechaHora;
     private javax.swing.JTextField txtFichaDisciplinaNoConocimiento;
     private javax.swing.JTextField txtFichaDisciplinaNombre;
     private javax.swing.JTextField txtRegistroSocial;

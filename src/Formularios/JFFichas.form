@@ -1959,9 +1959,9 @@
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Component id="jScrollPane18" min="-2" pref="400" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="jTextField37" alignment="0" pref="400" max="32767" attributes="0"/>
+                                                          <Component id="txtFichaDisciplinaEdad" alignment="0" pref="400" max="32767" attributes="0"/>
                                                           <Component id="txtFichaDisciplinaNombre" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="jTextField38" alignment="0" pref="400" max="32767" attributes="0"/>
+                                                          <Component id="txtFichaDisciplinaFechaHora" alignment="0" pref="400" max="32767" attributes="0"/>
                                                           <Component id="jScrollPane19" alignment="0" max="32767" attributes="0"/>
                                                           <Component id="txtFichaDisciplinaNoConocimiento" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                                                       </Group>
@@ -2011,12 +2011,12 @@
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel98" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField37" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtFichaDisciplinaEdad" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel99" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField38" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtFichaDisciplinaFechaHora" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -2090,12 +2090,15 @@
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtFichaDisciplinaNoConocimiento">
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtFichaDisciplinaNoConocimientoActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtFichaDisciplinaNombre">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField37">
+                    <Component class="javax.swing.JTextField" name="txtFichaDisciplinaEdad">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField38">
+                    <Component class="javax.swing.JTextField" name="txtFichaDisciplinaFechaHora">
                     </Component>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane18">
                       <AuxValues>
@@ -2104,7 +2107,7 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTextArea" name="jTextArea16">
+                        <Component class="javax.swing.JTextArea" name="areaFichaDisciplinaNormasInfringio">
                           <Properties>
                             <Property name="columns" type="int" value="20"/>
                             <Property name="rows" type="int" value="5"/>
@@ -2135,7 +2138,7 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTextArea" name="jTextArea17">
+                        <Component class="javax.swing.JTextArea" name="areaFichaDisciplinaRazon">
                           <Properties>
                             <Property name="columns" type="int" value="20"/>
                             <Property name="rows" type="int" value="5"/>
@@ -2150,7 +2153,7 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTextArea" name="jTextArea18">
+                        <Component class="javax.swing.JTextArea" name="areaFichaDisciplinaMedidasSanciones">
                           <Properties>
                             <Property name="columns" type="int" value="20"/>
                             <Property name="rows" type="int" value="5"/>
@@ -2778,17 +2781,17 @@
                                                   <Group type="102" attributes="0">
                                                       <Component id="jLabel115" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                                                      <Component id="jTextField46" min="-2" pref="149" max="-2" attributes="0"/>
+                                                      <Component id="txtControlInternoTelefono" min="-2" pref="149" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" attributes="0">
                                                       <Component id="jLabel114" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jTextField45" max="32767" attributes="0"/>
+                                                      <Component id="txtControlInternoLugaryFecha" max="32767" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" attributes="0">
                                                       <Component id="jLabel113" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="32767" attributes="0"/>
-                                                      <Component id="jTextField44" min="-2" pref="516" max="-2" attributes="0"/>
+                                                      <Component id="txtControlInternoDireccion" min="-2" pref="516" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" attributes="0">
                                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -2796,37 +2799,37 @@
                                                           <Group type="102" alignment="0" attributes="0">
                                                               <Component id="jLabel109" min="-2" max="-2" attributes="0"/>
                                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                              <Component id="jTextField41" min="-2" pref="99" max="-2" attributes="0"/>
+                                                              <Component id="txtControlInternoEdad" min="-2" pref="99" max="-2" attributes="0"/>
                                                           </Group>
                                                           <Group type="102" alignment="0" attributes="0">
                                                               <Component id="jLabel107" min="-2" max="-2" attributes="0"/>
                                                               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                                                              <Component id="jTextField39" min="-2" pref="99" max="-2" attributes="0"/>
+                                                              <Component id="txtControlInternoNumero" min="-2" pref="99" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                       <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="1" attributes="0">
-                                                          <Component id="jTextField40" min="-2" pref="400" max="-2" attributes="0"/>
+                                                          <Component id="txtControlInternoPersonaqueVisita" min="-2" pref="400" max="-2" attributes="0"/>
                                                           <Group type="102" attributes="0">
                                                               <Component id="jLabel110" min="-2" max="-2" attributes="0"/>
                                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                              <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="comboControlInternoSexo" min="-2" max="-2" attributes="0"/>
                                                               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                                                               <Component id="jLabel111" min="-2" max="-2" attributes="0"/>
                                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                              <Component id="jTextField42" min="-2" pref="191" max="-2" attributes="0"/>
+                                                              <Component id="txtControlInternoParentesco" min="-2" pref="191" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" attributes="0">
                                                       <Component id="jLabel112" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="32767" attributes="0"/>
-                                                      <Component id="jTextField43" min="-2" pref="516" max="-2" attributes="0"/>
+                                                      <Component id="txtControlInternoOtros" min="-2" pref="516" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jLabel116" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="jTextField47" max="32767" attributes="0"/>
+                                                      <Component id="txtControlInternoPersonaQatiendelaVisita" max="32767" attributes="0"/>
                                                   </Group>
                                               </Group>
                                           </Group>
@@ -2846,10 +2849,10 @@
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="jTextField50" max="32767" attributes="0"/>
-                                                  <Component id="jTextField52" min="-2" pref="150" max="-2" attributes="0"/>
-                                                  <Component id="jTextField53" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="jTextField54" alignment="0" min="-2" pref="399" max="-2" attributes="0"/>
+                                                  <Component id="txtControlInternoFechadeNacimiento" max="32767" attributes="0"/>
+                                                  <Component id="txtControlInternoNumeroProceso" min="-2" pref="150" max="-2" attributes="0"/>
+                                                  <Component id="txtControlInternoNombrePadreMadre" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="txtControlInternoReligion" alignment="0" min="-2" pref="399" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
@@ -2859,8 +2862,8 @@
                                               </Group>
                                               <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jTextField48" min="-2" pref="99" max="-2" attributes="0"/>
-                                                  <Component id="jTextField49" min="-2" pref="413" max="-2" attributes="0"/>
+                                                  <Component id="txtControlInternoFichaAtencionNumero" min="-2" pref="99" max="-2" attributes="0"/>
+                                                  <Component id="txtControlInternoNombre" min="-2" pref="413" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="102" attributes="0">
@@ -2887,36 +2890,36 @@
                                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel107" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField39" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtControlInternoNumero" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel108" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField40" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtControlInternoPersonaqueVisita" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel109" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField41" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtControlInternoEdad" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel110" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="comboControlInternoSexo" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel111" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField42" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtControlInternoParentesco" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel112" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField43" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtControlInternoOtros" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel113" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField44" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtControlInternoDireccion" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel114" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField45" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtControlInternoLugaryFecha" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" attributes="0">
@@ -2924,44 +2927,44 @@
                                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel118" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField48" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtControlInternoFichaAtencionNumero" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel119" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField49" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtControlInternoNombre" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel120" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField50" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtControlInternoFechadeNacimiento" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel121" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField52" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtControlInternoNumeroProceso" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel122" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField53" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtControlInternoNombrePadreMadre" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel123" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField54" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtControlInternoReligion" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel115" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField46" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtControlInternoTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel116" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField47" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtControlInternoPersonaQatiendelaVisita" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -3070,19 +3073,19 @@
                         <Property name="text" type="java.lang.String" value="Nombre de la persona que atiende la visita:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField39">
+                    <Component class="javax.swing.JTextField" name="txtControlInternoNumero">
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField39ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtControlInternoNumeroActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField40">
+                    <Component class="javax.swing.JTextField" name="txtControlInternoPersonaqueVisita">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField41">
+                    <Component class="javax.swing.JTextField" name="txtControlInternoEdad">
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField41ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtControlInternoEdadActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JComboBox" name="jComboBox1">
+                    <Component class="javax.swing.JComboBox" name="comboControlInternoSexo">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                           <StringArray count="2">
@@ -3093,34 +3096,34 @@
                         <Property name="selectedIndex" type="int" value="-1"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField42">
+                    <Component class="javax.swing.JTextField" name="txtControlInternoParentesco">
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField42ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtControlInternoParentescoActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField43">
+                    <Component class="javax.swing.JTextField" name="txtControlInternoOtros">
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField43ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtControlInternoOtrosActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField44">
+                    <Component class="javax.swing.JTextField" name="txtControlInternoDireccion">
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField44ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtControlInternoDireccionActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField45">
+                    <Component class="javax.swing.JTextField" name="txtControlInternoLugaryFecha">
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField45ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtControlInternoLugaryFechaActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField46">
+                    <Component class="javax.swing.JTextField" name="txtControlInternoTelefono">
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField46ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtControlInternoTelefonoActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField47">
+                    <Component class="javax.swing.JTextField" name="txtControlInternoPersonaQatiendelaVisita">
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField47ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtControlInternoPersonaQatiendelaVisitaActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel117">
@@ -3131,9 +3134,9 @@
                         <Property name="text" type="java.lang.String" value="FICHA DE ATENCI&#xd3;N PERSONAL/ESPIRITUAL"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField48">
+                    <Component class="javax.swing.JTextField" name="txtControlInternoFichaAtencionNumero">
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField48ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtControlInternoFichaAtencionNumeroActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel118">
@@ -3152,11 +3155,11 @@
                         <Property name="text" type="java.lang.String" value="Nombre:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField49">
+                    <Component class="javax.swing.JTextField" name="txtControlInternoNombre">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField50">
+                    <Component class="javax.swing.JTextField" name="txtControlInternoFechadeNacimiento">
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField50ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtControlInternoFechadeNacimientoActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel120">
@@ -3167,9 +3170,9 @@
                         <Property name="text" type="java.lang.String" value="Fecha de nacimiento: "/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField52">
+                    <Component class="javax.swing.JTextField" name="txtControlInternoNumeroProceso">
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField52ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtControlInternoNumeroProcesoActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel121">
@@ -3188,14 +3191,14 @@
                         <Property name="text" type="java.lang.String" value="Nombre del padre/madre: "/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField53">
+                    <Component class="javax.swing.JTextField" name="txtControlInternoNombrePadreMadre">
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField53ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtControlInternoNombrePadreMadreActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField54">
+                    <Component class="javax.swing.JTextField" name="txtControlInternoReligion">
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField54ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtControlInternoReligionActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel123">
